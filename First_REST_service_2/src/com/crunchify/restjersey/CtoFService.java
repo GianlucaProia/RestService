@@ -94,6 +94,7 @@ public class CtoFService {
 	@Produces("application/xml")
 	public Response getAvalue(@PathParam("start") String start) {
 		// Riprendere il valore di a in modo statico...
+		// Usare Response per l'output...
 		String output = "<ctofservice> Il valore di a è:" + MyClass.a + "</ctofservice>";
 		return Response.status(200).type(MediaType.TEXT_XML).entity(output).build();
 	}
